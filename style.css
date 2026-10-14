@@ -1,0 +1,880 @@
+
+
+:root {
+
+  --board-height: 700px;
+  --board-width: 700px;
+  --board-border-width: 5px;
+
+  --board-home-nickname-tx-size: 10px;
+  --board-home-nickname-padding: 5px 10px;
+  --board-home-nickname-bottom: 10px;
+  --board-home-coin-circle-radius: 3px;
+
+  --board-path-cell-border-width: 1px;
+  --board-path-coin-border-width: 1px;
+  --board-path-coin-tx-size: 16px;
+
+  --board-boardDice-border-width: 1px;
+  --board-boardDice-cube-size: 60px;
+  --board-boardDice-cube-border-width: 2px;
+  --board-boardDice-cube-dot-size: 12px;
+
+  --alert-cointaner-top: 16px;
+  --alert-cointaner-alert-body-padding: 10px 20px;
+  --alert-cointaner-alert-body-margin-bottom: 20px;
+  --alert-cointaner-alert-body-border-width: 2px;
+  --alert-cointaner-alert-body-tx-size: 16px;
+
+}
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  :root {
+
+    --sceen-size: XL;
+    --board-height: 600px;
+    --board-width: 600px;
+    --board-border-width: 2px;
+
+    --board-home-nickname-tx-size: 8px;
+    --board-home-nickname-padding: 2px 3px;
+    --board-home-nickname-bottom: 3px;
+    --board-home-coin-circle-radius: 3px;
+
+    --board-path-cell-border-width: .75px;
+    --board-path-coin-border-width: .5px;
+    --board-path-coin-tx-size: 8px;
+
+    --board-boardDice-border-width: 1px;
+    --board-boardDice-cube-size: 50px;
+    --board-boardDice-cube-border-width: 1px;
+    --board-boardDice-cube-dot-size: 8px;
+
+    --alert-cointaner-top: 16px;
+    --alert-cointaner-alert-body-padding: 5px 10px;
+    --alert-cointaner-alert-body-margin-bottom: 5px;
+    --alert-cointaner-alert-body-border-width: 2px;
+    --alert-cointaner-alert-body-tx-size: 12px;
+
+  }
+}
+@media screen and (max-width: 720px) {
+  :root {
+
+    --sceen-size: M;
+
+    --board-height: min(88vw, 70vh, 480px);
+    --board-width: min(88vw, 70vh, 480px);
+    --board-border-width: 2px;
+
+    --board-home-nickname-tx-size: 8px;
+    --board-home-nickname-padding: 2px 3px;
+    --board-home-nickname-bottom: 3px;
+    --board-home-coin-circle-radius: 3px;
+
+    --board-path-cell-border-width: .5px;
+    --board-path-coin-border-width: .5px;
+    --board-path-coin-tx-size: 8px;
+
+    --board-boardDice-border-width: 1px;
+    --board-boardDice-cube-size: 40px;
+    --board-boardDice-cube-border-width: 1px;
+    --board-boardDice-cube-dot-size: 8px;
+
+    --alert-cointaner-top: 16px;
+    --alert-cointaner-alert-body-padding: 5px 10px;
+    --alert-cointaner-alert-body-margin-bottom: 5px;
+    --alert-cointaner-alert-body-border-width: 2px;
+    --alert-cointaner-alert-body-tx-size: 12px;
+
+  }
+}
+
+:root {
+  --color-bg: #f4f5f7;
+  --color-panel: #ffffff;
+  --color-border: #e2e4e9;
+  --color-text: #1f2430;
+  --color-text-muted: #6b7280;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 1px 3px rgba(16, 24, 40, .08);
+
+
+  --player1-color: #d42525;
+  --player1-color-light: #fbe4e4;
+  --player2-color: #199b3c;
+  --player2-color-light: #e0f5e5;
+  --player3-color: #b8a800;
+  --player3-color-light: #f8f5d6;
+  --player4-color: #0584c4;
+  --player4-color-light: #dcf0fa;
+  --active-glow-color: var(--player1-color);
+
+  --board-bg-color: var(--color-panel);
+  --board-border-color: var(--color-border);
+  --board-home-bg-color: var(--color-panel);
+  --board-home-bg-active-color: rgba(0, 0, 0, .06);
+  --board-home-nickname-bg-color: transparent;
+  --board-home-nickname-tx-color: var(--color-text);
+  --board-path-coin-tx-color: #ffffff;
+  --board-path-number-text-color: var(--color-border);
+  --baord-path-stamp-bg-color: var(--color-bg);
+  --common-border-type1-color: var(--color-border);
+
+  --board-boardDice-bg-color: var(--color-panel);
+  --board-boardDice-dot-color: var(--color-text);
+  --board-boardDice-border-color: var(--color-border);
+
+  --alert-cointaner-shadow: var(--shadow);
+  --alert-cointaner-border-color: var(--color-primary);
+  --alert-cointaner-bg-color: var(--color-primary-light);
+  --alert-cointaner-tx-color: var(--color-primary);
+
+  --winner1st-badge-border-color: #a88000;
+  --winner2nd-badge-border-color: #bababa;
+  --winner3rd-badge-border-color: #d88200;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #14161f;
+  --color-panel: #1c1f2b;
+  --color-border: #2f3242;
+  --color-text: #e7e8ee;
+  --color-text-muted: #9a9fb3;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .35);
+
+
+  --player1-color: #e34d4d;
+  --player1-color-light: #3a2226;
+  --player2-color: #3fc164;
+  --player2-color-light: #1c3327;
+  --player3-color: #d8c832;
+  --player3-color-light: #3a3712;
+  --player4-color: #35a6e0;
+  --player4-color-light: #1e3a5f;
+
+  --board-home-bg-active-color: rgba(255, 255, 255, .08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  user-select: none;
+}
+
+.noBorderTop {
+  border-top: none !important;
+}
+.noBorderBottom {
+  border-bottom: none !important;
+}
+.noBorderLeft {
+  border-left: none !important;
+}
+.noBorderRight {
+  border-right: none !important;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.btn {
+  font-size: 14px;
+}
+.btn-icon {
+  padding: 6px;
+}
+.btn .icon {
+  width: 16px;
+  height: 16px;
+}
+.modal-message {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.help-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.help-list li + li {
+  margin-top: 8px;
+}
+
+.modal.modal-force-choice .modal-close {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.board {
+  position: relative;
+  z-index: 0;
+  max-width: var(--board-width);
+  max-height: var(--board-height);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  border-width: var(--board-border-width);
+  border-color: var(--board-border-color);
+  border-style: solid;
+  background: var(--board-bg-color);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.boardHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.boardHome div {
+  position: relative;
+  z-index: 0;
+  width: 70%;
+  height: 70%;
+  background: var(--board-home-bg-color);
+  border: 1px solid var(--board-border-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-radius: var(--radius);
+  align-items: center;
+  justify-items: center;
+}
+.boardHome .boardHomeNickName {
+  position: absolute;
+  bottom: var(--board-home-nickname-bottom);
+  padding: var(--board-home-nickname-padding);
+  background-color: var(--board-home-nickname-bg-color);
+  color: var(--board-home-nickname-tx-color);
+  border-radius: var(--radius);
+  font-size: var(--board-home-nickname-tx-size);
+  font-weight: bold;
+}
+
+.boardHome.active div::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--board-home-bg-active-color);
+  opacity: 0;
+  pointer-events: none;
+  animation: animation_homePulse 1s infinite ease-in-out;
+}
+.boardHome div span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: var(--board-home-bg-color);
+}
+.boardHomeCoin::before {
+  content: '';
+  position:absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+.boardHomeCoin.active::before {
+  border: 1px solid var(--color-text);
+  box-shadow: 0px 0px 44px 0px var(--active-glow-color);
+  animation: animation_coinPulse 1s infinite ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+}
+.boardHomeCoin.done::before {
+  content: '';
+  position:absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.65);
+}
+
+.boardHomeCoin.done::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: #ffffff;
+  -webkit-mask-image: url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/check.svg);
+  mask-image: url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/check.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 50%;
+  mask-size: 50%;
+  pointer-events: none;
+}
+
+.boardHome.winner1st,
+.boardHome.winner2nd,
+.boardHome.winner3rd {
+  overflow: hidden;
+}
+.boardHome.winner1st::before,
+.boardHome.winner2nd::before,
+.boardHome.winner3rd::before {
+  position: absolute;
+  z-index: 5;
+  width: 130px;
+  padding: 4px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #fff;
+  pointer-events: none;
+}
+#boardHomePlayer1.winner1st::before,
+#boardHomePlayer1.winner2nd::before,
+#boardHomePlayer1.winner3rd::before {
+  top: 18px;
+  left: -34px;
+  transform: rotate(-45deg);
+}
+#boardHomePlayer2.winner1st::before,
+#boardHomePlayer2.winner2nd::before,
+#boardHomePlayer2.winner3rd::before {
+  top: 18px;
+  right: -34px;
+  transform: rotate(45deg);
+}
+#boardHomePlayer3.winner1st::before,
+#boardHomePlayer3.winner2nd::before,
+#boardHomePlayer3.winner3rd::before {
+  bottom: 18px;
+  right: -34px;
+  transform: rotate(-45deg);
+}
+#boardHomePlayer4.winner1st::before,
+#boardHomePlayer4.winner2nd::before,
+#boardHomePlayer4.winner3rd::before {
+  bottom: 18px;
+  left: -34px;
+  transform: rotate(45deg);
+}
+.boardHome.winner1st::before {
+  content: '1st';
+  background: var(--winner1st-badge-border-color);
+}
+.boardHome.winner2nd::before {
+  content: '2nd';
+  background: var(--winner2nd-badge-border-color);
+}
+.boardHome.winner3rd::before {
+  content: '3rd';
+  background: var(--winner3rd-badge-border-color);
+}
+#boardHomePlayer1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: var(--player1-color-light);
+  border-bottom-right-radius: var(--radius);
+}
+#boardHomePlayer2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: var(--player2-color-light);
+  border-bottom-left-radius: var(--radius);
+}
+#boardHomePlayer3 {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: var(--player3-color-light);
+  border-top-left-radius: var(--radius);
+}
+#boardHomePlayer4 {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: var(--player4-color-light);
+  border-top-right-radius: var(--radius);
+}
+#boardHomePlayer1 div span {
+  border-style: solid;
+  border-color: var(--player1-color);
+  border-width: var(--board-home-coin-circle-radius);
+}
+#boardHomePlayer2 div span {
+  border-style: solid;
+  border-color: var(--player2-color);
+  border-width: var(--board-home-coin-circle-radius);
+}
+#boardHomePlayer3 div span {
+  border-style: solid;
+  border-color: var(--player3-color);
+  border-width: var(--board-home-coin-circle-radius);
+}
+#boardHomePlayer4 div span {
+  border-style: solid;
+  border-color: var(--player4-color);
+  border-width: var(--board-home-coin-circle-radius);
+}
+@keyframes animation_homePulse {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.boardPath {
+  display: grid;
+}
+.boardPath .boardPartCell {
+  border-style: solid;
+  border-color: var(--common-border-type1-color);
+  border-width: var(--board-path-cell-border-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--board-path-number-text-color)
+}
+.boardPath .boardPartCell.stamp {
+  position: relative;
+  background: var(--baord-path-stamp-bg-color);
+}
+
+.boardPath .boardPartCell.stamp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 60%;
+  height: 60%;
+  background-color: var(--color-text-muted);
+  opacity: .3;
+  -webkit-mask-image: url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/star.svg);
+  mask-image: url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/star.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  pointer-events: none;
+}
+.boardPathCoin {
+  position:relative;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--player1-color) 0% var(--player1Coin),
+    var(--player2-color) var(--player1Coin) calc(var(--player1Coin) + var(--player2Coin)),
+    var(--player3-color) calc(var(--player1Coin) + var(--player2Coin)) calc(var(--player1Coin) + var(--player2Coin) + var(--player3Coin)),
+    var(--player4-color) calc(var(--player1Coin) + var(--player2Coin) + var(--player3Coin)) 100%
+  );
+  border-style: solid;
+  border-width: var(--board-path-coin-border-width);
+  border-color: var(--common-border-type1-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--board-path-coin-tx-color);
+  font-size: var(--board-path-coin-tx-size);
+}
+.boardPathCoin.active {
+  border-style: solid;
+  border-width: var(--board-path-coin-border-width);
+  border-color: var(--color-text);
+  box-shadow: 0px 0px 44px 0px var(--active-glow-color);
+  animation: animation_coinPulse 1s infinite ease-in-out;
+  cursor: pointer;
+}
+#boardPathPlayer1 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#boardPathPlayer2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#boardPathPlayer3 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+#boardPathPlayer4 {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#boardPathPlayer1.boardPath {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+#boardPathPlayer2.boardPath {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+#boardPathPlayer3.boardPath {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+#boardPathPlayer4.boardPath {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+#boardPathPlayer1 .boardPartCell.entryway {
+  background: var(--player1-color-light);
+}
+#boardPathPlayer2 .boardPartCell.entryway {
+  background: var(--player2-color-light);
+}
+#boardPathPlayer3 .boardPartCell.entryway {
+  background: var(--player3-color-light);
+}
+#boardPathPlayer4 .boardPartCell.entryway {
+  background: var(--player4-color-light);
+}
+#boardHomePlayer1 .boardHomeCoin::before {
+  background: var(--player1-color);
+}
+#boardHomePlayer2 .boardHomeCoin::before {
+  background: var(--player2-color);
+}
+#boardHomePlayer3 .boardHomeCoin::before {
+  background: var(--player3-color);
+}
+#boardHomePlayer4 .boardHomeCoin::before {
+  background: var(--player4-color);
+}
+#boardHomePlayer1 .boardHomeCoinDone::before {
+  background: var(--player1-color);
+}
+#boardHomePlayer2 .boardHomeCoinDone::before {
+  background: var(--player2-color);
+}
+#boardHomePlayer3 .boardHomeCoinDone::before {
+  background: var(--player4-color);
+}
+#boardHomePlayer4 .boardHomeCoinDone::before {
+  background: var(--player3-color);
+}
+@keyframes animation_coinPulse {
+  0% { transform: scale(1); box-shadow: 0px 0px 44px 0px var(--active-glow-color); }
+  50% { transform: scale(.9); }
+  100% { transform: scale(1); box-shadow: 0px 0px 44px 0px var(--active-glow-color);}
+}
+
+#boardDiceCointaner {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: var(--board-boardDice-border-width);
+  border-color: var(--board-border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--board-bg-color);
+}
+#boardDiceCointaner .boardDiceRoller {
+  position: relative;
+  height: var(--board-boardDice-cube-size);
+  width: var(--board-boardDice-cube-size);
+  perspective: var(--board-prespective-size);
+  -webkit-perspective: var(--board-prespective-size);
+}
+#boardDiceCointaner .boardDiceRoller .boardDice {
+  cursor: pointer;
+  position: absolute;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  transform: translateZ(calc(-1 * var(--board-boardDice-cube-size))) rotateX(0deg) rotateY(0deg);
+  -webkit-transform: translateZ(calc(-1 * var(--board-boardDice-cube-size))) rotateX(0deg) rotateY(0deg);
+  transform: translateZ(calc(-1 * var(--board-boardDice-cube-size))) rotateX(0deg) rotateY(0deg);
+  -webkit-transform: translateZ(calc(-1 * var(--board-boardDice-cube-size))) rotateX(0deg) rotateY(0deg);
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.lock {
+  cursor: not-allowed;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice > div {
+  backface-visibility: hidden;
+  height: var(--board-boardDice-cube-size);
+  width: var(--board-boardDice-cube-size);
+  position: absolute;
+  background: var(--board-boardDice-bg-color);
+  border-style: solid;
+  border-width: var(--board-boardDice-cube-border-width);
+  border-color: var(--board-boardDice-border-color);
+}
+#boardDiceCointaner .boardDiceRoller .boardDice > div > span {
+  position: absolute;
+  background: var(--board-boardDice-dot-color);
+  height: var(--board-boardDice-cube-dot-size);
+  width: var(--board-boardDice-cube-dot-size);
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  backface-visibility: hidden;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face1 {
+  transform: rotateY( 0deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+  -webkit-transform: rotateY( 0deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face2 {
+  transform: rotateX( 180deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+  -webkit-transform: rotateX( 180deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face3 {
+  transform: rotateY( 90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+  -webkit-transform: rotateY( 90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face4 {
+  transform: rotateY( -90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+  -webkit-transform: rotateY( -90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face5 {
+  transform: rotateX( 90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+  -webkit-transform: rotateX( 90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 {
+  transform: rotateX( -90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+  -webkit-transform: rotateX( -90deg) translateZ(calc(var(--board-boardDice-cube-size) / 2));
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face1 span,
+#boardDiceCointaner .boardDiceRoller .boardDice .face3 span:nth-child(2),
+#boardDiceCointaner .boardDiceRoller .boardDice .face5 span:nth-child(5) {
+  top: 50%;
+  left: 50%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face2 span:nth-child(1),
+#boardDiceCointaner .boardDiceRoller .boardDice .face3 span:nth-child(1),
+#boardDiceCointaner .boardDiceRoller .boardDice .face4 span:nth-child(1),
+#boardDiceCointaner .boardDiceRoller .boardDice .face5 span:nth-child(1),
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 span:nth-child(1) {
+  top: 25%;
+  left: 25%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face2 span:nth-child(2),
+#boardDiceCointaner .boardDiceRoller .boardDice .face3 span:nth-child(3),
+#boardDiceCointaner .boardDiceRoller .boardDice .face4 span:nth-child(4),
+#boardDiceCointaner .boardDiceRoller .boardDice .face5 span:nth-child(4),
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 span:nth-child(6) {
+  top: 75%;
+  left: 75%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face4 span:nth-child(2),
+#boardDiceCointaner .boardDiceRoller .boardDice .face5 span:nth-child(2),
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 span:nth-child(2) {
+  top: 25%;
+  left: 75%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face4 span:nth-child(3),
+#boardDiceCointaner .boardDiceRoller .boardDice .face5 span:nth-child(3),
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 span:nth-child(5)  {
+  top: 75%;
+  left: 25%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 span:nth-child(3) {
+  top: 50%;
+  left: 25%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice .face6 span:nth-child(4) {
+  top: 50%;
+  left: 75%;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.roll-face1 {
+  animation: animation_rollFaceOne 1s 1 linear forwards;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.roll-face2 {
+  animation: animation_rollFaceTwo 1s 1 linear forwards;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.roll-face3 {
+  animation: animation_rollFaceThree 1s 1 linear forwards;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.roll-face4 {
+  animation: animation_rollFaceFour 1s 1 linear forwards;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.roll-face5 {
+  animation: animation_rollFaceFive 1s 1 linear forwards;
+}
+#boardDiceCointaner .boardDiceRoller .boardDice.roll-face6 {
+  animation: animation_rollFaceSix 1s 1 linear forwards;
+}
+@keyframes animation_rollFaceOne {
+  0% {
+    transform: translateZ( -40px) rotateX( -10deg) rotateY( -10deg);
+  }
+  100% {
+    transform: translateZ( -40px) rotateX( -180deg) rotateY( -540deg);
+  }
+}
+@keyframes animation_rollFaceTwo {
+  0% {
+    transform: translateZ( -40px) rotateX( -10deg) rotateY( -10deg);
+  }
+  100% {
+    transform: translateZ( -40px) rotateX( -360deg) rotateY( -540deg);
+  }
+}
+@keyframes animation_rollFaceThree {
+  0% {
+    transform: translateZ( -40px) rotateX( -10deg) rotateY( -10deg);
+  }
+  100% {
+    transform: translateZ( -40px) rotateX( -360deg) rotateY( -450deg);
+  }
+}
+@keyframes animation_rollFaceFour {
+  0% {
+    transform: translateZ( -40px) rotateX( -10deg) rotateY( -10deg);
+  }
+  100% {
+    transform: translateZ( -40px) rotateX( -360deg) rotateY( -630deg);
+  }
+}
+@keyframes animation_rollFaceFive {
+  0% {
+    -webkit-transform: translateZ( -40px) rotateX( -10deg) rotateY( -10deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: translateZ( -40px) rotateX( -450deg) rotateY( -360deg) rotateZ(0deg);
+  }
+}
+@keyframes animation_rollFaceSix {
+  0% {
+    -webkit-transform: translateZ( -40px) rotateX( -10deg) rotateY( -10deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: translateZ( -40px) rotateX( -450deg) rotateY( 0deg) rotateZ(-180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="on"]) .boardHome.active div::before,
+  :root:not([data-motion="on"]) .boardHomeCoin.active::before {
+    animation: none;
+  }
+  :root:not([data-motion="on"]) #boardDiceCointaner .boardDiceRoller .boardDice.roll-face1,
+  :root:not([data-motion="on"]) #boardDiceCointaner .boardDiceRoller .boardDice.roll-face2,
+  :root:not([data-motion="on"]) #boardDiceCointaner .boardDiceRoller .boardDice.roll-face3,
+  :root:not([data-motion="on"]) #boardDiceCointaner .boardDiceRoller .boardDice.roll-face4,
+  :root:not([data-motion="on"]) #boardDiceCointaner .boardDiceRoller .boardDice.roll-face5,
+  :root:not([data-motion="on"]) #boardDiceCointaner .boardDiceRoller .boardDice.roll-face6 {
+    animation-duration: 0.01ms !important;
+  }
+  :root:not([data-motion="on"]) #alertContainer .alertBody {
+    animation: none;
+  }
+}
+:root[data-motion="reduced"] .boardHome.active div::before,
+:root[data-motion="reduced"] .boardHomeCoin.active::before {
+  animation: none;
+}
+:root[data-motion="reduced"] #boardDiceCointaner .boardDiceRoller .boardDice.roll-face1,
+:root[data-motion="reduced"] #boardDiceCointaner .boardDiceRoller .boardDice.roll-face2,
+:root[data-motion="reduced"] #boardDiceCointaner .boardDiceRoller .boardDice.roll-face3,
+:root[data-motion="reduced"] #boardDiceCointaner .boardDiceRoller .boardDice.roll-face4,
+:root[data-motion="reduced"] #boardDiceCointaner .boardDiceRoller .boardDice.roll-face5,
+:root[data-motion="reduced"] #boardDiceCointaner .boardDiceRoller .boardDice.roll-face6 {
+  animation-duration: 0.01ms !important;
+}
+:root[data-motion="reduced"] #alertContainer .alertBody {
+  animation: none;
+}
+
+#alertContainer {
+  position: fixed;
+  top: var(--alert-cointaner-top);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+#alertContainer .alertBody {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 10px;
+  padding: var(--alert-cointaner-alert-body-padding);
+  border-style: solid;
+  border-width: var(--alert-cointaner-alert-body-border-width);
+  box-shadow: var(--alert-cointaner-shadow);
+  animation: animation_slideInFromTop cubic-bezier(.34,1.56,.64,1) .35s, animation_fadeOut ease .4s 3.6s forwards;
+  margin-bottom: var(--alert-cointaner-alert-body-margin-bottom);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: var(--alert-cointaner-alert-body-tx-size);
+  font-weight: 500;
+}
+#alertContainer .alertBody.success,
+#alertContainer .alertBody.info,
+#alertContainer .alertBody.failed {
+  border-color: var(--alert-cointaner-border-color);
+  background-color: var(--alert-cointaner-bg-color);
+  color: var(--alert-cointaner-tx-color);
+}
+@keyframes animation_slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-28px) scale(.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes animation_fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scale(.94);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #alertContainer {
+    max-width: calc(100vw - 32px);
+  }
+  #alertContainer .alertBody {
+    white-space: normal;
+    align-items: flex-start;
+  }
+}

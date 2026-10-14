@@ -1,0 +1,20 @@
+#Sample Saved Games
+# Open one of these URLs to load that board state via the ?progress= param.
+
+Early game - Player 1 to move, one coin just left home
+http://127.0.0.1:5500/?progress=100000001000000000000000000000000
+
+Mid game - Player 2 to move, coins scattered across the board
+http://127.0.0.1:5500/?progress=200032557000014450009300000000006
+
+Mid game, with custom player names
+http://127.0.0.1:5500/?progress=200032557000014450009300000000006&p1=Anish&p2=Neha&p3=Ehan&p4=Ezzah
+
+Player 2 has already finished (1st place) - Player 1 to move
+http://127.0.0.1:5500/?progress=1000523405757575700001250000000082
+
+All 3 podium spots filled (Player 2 = 1st, Player 4 = 2nd, Player 1 = 3rd) - Player 3 to move
+http://127.0.0.1:5500/?progress=357575757575757570005234057575757241
+
+Three different players' coins sharing one safe (star) cell - Player 3 to move
+http://127.0.0.1:5500/?progress=301000000400000000000000014000000

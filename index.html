@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludo Buddy</title>
+  <link rel="icon" type="image/png" href="media/favicon.png">
+  <link rel="stylesheet" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/css/tokens.css">
+  <link rel="stylesheet" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/css/base.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/theme-init.js" data-app="webgame_ludoBuddy"></script>
+</head>
+<body>
+
+<div class="app">
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="brand-icon" aria-hidden="true"><span class="icon" style="-webkit-mask-image:url(media/icon.svg);mask-image:url(media/icon.svg);"></span></span>
+      <h1>Ludo Buddy</h1>
+    </div>
+    <div class="topbar-actions">
+      <button id="btnShare" class="btn btn-ghost btn-icon" title="Share Progress" aria-label="Share Progress"></button>
+      <button id="btnHelp" class="btn btn-ghost btn-icon" title="Help" aria-label="Help"></button>
+      <button id="btnSettings" class="btn btn-ghost btn-icon" title="Settings" aria-label="Settings"></button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="board" class="board">
+
+      <div id="boardHomePlayer1" class="boardHome active">
+        <header class="boardHomeNickName" contenteditable></header>
+        <div class="">
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+        </div>
+      </div>
+      <div id="boardHomePlayer2" class="boardHome">
+        <header class="boardHomeNickName" contenteditable></header>
+        <div class="">
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+        </div>
+      </div>
+      <div id="boardHomePlayer3" class="boardHome">
+        <header class="boardHomeNickName" contenteditable></header>
+        <div class="">
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+        </div>
+      </div>
+      <div id="boardHomePlayer4" class="boardHome">
+        <header class="boardHomeNickName" contenteditable></header>
+        <div class="">
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+          <span class="boardHomeCoin"></span>
+        </div>
+      </div>
+
+      <div id="boardPathPlayer1" class="boardPath">
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="39" data-path-player3="26" data-path-player4="13" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="1" data-path-player2="40" data-path-player3="27" data-path-player4="14" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="2" data-path-player2="41" data-path-player3="28" data-path-player4="15" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="3" data-path-player2="42" data-path-player3="29" data-path-player4="16" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="4" data-path-player2="43" data-path-player3="30" data-path-player4="17" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="5" data-path-player2="44" data-path-player3="31" data-path-player4="18" class="boardPartCell noBorderTop noBorderRight"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="51" data-path-player2="38" data-path-player3="25" data-path-player4="12" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="52" data-path-player2="XX" data-path-player3="XX" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="53" data-path-player2="XX" data-path-player3="XX" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="54" data-path-player2="XX" data-path-player3="XX" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="55" data-path-player2="XX" data-path-player3="XX" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="56" data-path-player2="XX" data-path-player3="XX" data-path-player4="XX" class="boardPartCell entryway noBorderRight"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="50" data-path-player2="37" data-path-player3="24" data-path-player4="11" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="49" data-path-player2="36" data-path-player3="23" data-path-player4="10" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="48" data-path-player2="35" data-path-player3="22" data-path-player4="9" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="47" data-path-player2="34" data-path-player3="21" data-path-player4="8" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="46" data-path-player2="33" data-path-player3="20" data-path-player4="7" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="45" data-path-player2="32" data-path-player3="19" data-path-player4="6" class="boardPartCell noBorderBottom noBorderRight"></div>
+      </div>
+      <div id="boardPathPlayer2" class="boardPath">
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="11" data-path-player2="50" data-path-player3="37" data-path-player4="24" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="12" data-path-player2="51" data-path-player3="38" data-path-player4="25" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="13" data-path-player2="XX" data-path-player3="39" data-path-player4="26" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="10" data-path-player2="49" data-path-player3="36" data-path-player4="23" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="52" data-path-player3="XX" data-path-player4="" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="14" data-path-player2="1" data-path-player3="40" data-path-player4="27" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="9" data-path-player2="48" data-path-player3="35" data-path-player4="22" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="53" data-path-player3="XX" data-path-player4="" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="15" data-path-player2="2" data-path-player3="41" data-path-player4="28" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="8" data-path-player2="47" data-path-player3="34" data-path-player4="21" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="54" data-path-player3="XX" data-path-player4="" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="16" data-path-player2="3" data-path-player3="42" data-path-player4="29" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="7" data-path-player2="46" data-path-player3="33" data-path-player4="20" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="55" data-path-player3="XX" data-path-player4="" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="17" data-path-player2="4" data-path-player3="43" data-path-player4="30" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="6" data-path-player2="45" data-path-player3="32" data-path-player4="19" class="boardPartCell noBorderBottom noBorderLeft"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="56" data-path-player3="XX" data-path-player4="" class="boardPartCell entryway noBorderBottom"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="18" data-path-player2="5" data-path-player3="44" data-path-player4="31" class="boardPartCell noBorderBottom noBorderRight"></div>
+      </div>
+      <div id="boardPathPlayer3" class="boardPath">
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="19" data-path-player2="6" data-path-player3="45" data-path-player4="32" class="boardPartCell noBorderTop noBorderLeft"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="20" data-path-player2="7" data-path-player3="46" data-path-player4="33" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="21" data-path-player2="8" data-path-player3="47" data-path-player4="34" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="22" data-path-player2="9" data-path-player3="48" data-path-player4="35" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="23" data-path-player2="10" data-path-player3="49" data-path-player4="36" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="24" data-path-player2="11" data-path-player3="50" data-path-player4="37" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="56" data-path-player4="XX" class="boardPartCell entryway noBorderLeft"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="55" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="54" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="53" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="52" data-path-player4="XX" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="25" data-path-player2="12" data-path-player3="51" data-path-player4="38" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="31" data-path-player2="18" data-path-player3="5" data-path-player4="44" class="boardPartCell noBorderBottom noBorderLeft"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="30" data-path-player2="17" data-path-player3="4" data-path-player4="43" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="29" data-path-player2="16" data-path-player3="3" data-path-player4="42" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="28" data-path-player2="15" data-path-player3="2" data-path-player4="41" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="27" data-path-player2="14" data-path-player3="1" data-path-player4="40" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="26" data-path-player2="13" data-path-player3="XX" data-path-player4="39" class="boardPartCell"></div>
+      </div>
+      <div id="boardPathPlayer4" class="boardPath">
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="44" data-path-player2="31" data-path-player3="18" data-path-player4="5" class="boardPartCell noBorderTop noBorderLeft"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="XX" data-path-player4="56" class="boardPartCell entryway noBorderTop"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="32" data-path-player2="19" data-path-player3="6" data-path-player4="45" class="boardPartCell noBorderTop noBorderRight"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="43" data-path-player2="30" data-path-player3="17" data-path-player4="4" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="XX" data-path-player4="55" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="33" data-path-player2="20" data-path-player3="7" data-path-player4="46" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="42" data-path-player2="29" data-path-player3="16" data-path-player4="3" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="XX" data-path-player4="54" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="34" data-path-player2="21" data-path-player3="8" data-path-player4="47" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="41" data-path-player2="28" data-path-player3="15" data-path-player4="2" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="XX" data-path-player4="53" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="35" data-path-player2="22" data-path-player3="9" data-path-player4="48" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="40" data-path-player2="27" data-path-player3="14" data-path-player4="1" class="boardPartCell stamp"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="XX" data-path-player2="XX" data-path-player3="XX" data-path-player4="52" class="boardPartCell entryway"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="36" data-path-player2="23" data-path-player3="10" data-path-player4="49" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="39" data-path-player2="26" data-path-player3="13" data-path-player4="XX" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="38" data-path-player2="25" data-path-player3="12" data-path-player4="51" class="boardPartCell"></div>
+        <div data-coin-player1="0" data-coin-player2="0" data-coin-player3="0" data-coin-player4="0" data-path-player1="37" data-path-player2="24" data-path-player3="11" data-path-player4="50" class="boardPartCell"></div>
+      </div>
+
+      <div id="boardDiceCointaner" class="boardDiceCointaner">
+        <div id="boardDiceRoller" class="boardDiceRoller">
+          <div class="boardDice">
+            <div class="face1">
+              <span></span>
+            </div>
+            <div class="face2">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="face3">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="face4">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="face5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="face6">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="alertContainer"></div>
+</div>
+
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/utils.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/icons.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/modal.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/theme.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/settings.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/markdown.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/manual.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/confetti.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
